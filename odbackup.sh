@@ -10,9 +10,9 @@
 
 # Set variables
 NOW=$(date +"%Y%m%d")
-RECOVER="/Users/macadmin/Desktop/od-dc1databackups"
+RECOVER="/Users/USERNAME/Desktop/od-dc1databackups"
 TEMP_FILE="/tmp/od-dc1backupfile"
-BACKUPS="/Users/macadmin/Desktop/od-dc1databackups"
+BACKUPS="/Users/USERNAME/Desktop/od-dc1databackups"
 #PRODAFS4=`df -h | grep Production | awk '{print $6,$7}'`
 PRODAFS4="/Volumes/Production (afs4)"
 
@@ -30,7 +30,7 @@ else
 
         MOUNT_POINT="/Volumes/Production (afs4)"
         mkdir -v "$MOUNT_POINT" >> "$TEMP_FILE" 2>&1
-        /sbin/mount_afp "afp://macadmin@afs4.dmz.gnl/Production (afs4)" "$MOUNT_POINT"
+        /sbin/mount_afp "afp://USERNAME@ADDRESS/Production (afs4)" "$MOUNT_POINT"
 fi
 
 SERVERBUILDS="$PRODAFS4/Editorial Systems/Builds server/Server Details/od-dc1 data backup"
